@@ -28,7 +28,7 @@ class MoviesApi {
 
 // Создаем класс апи
 const moviesApi = new MoviesApi({
-  baseUrl: "https://djonsan.nomoredomains.icu",
+  baseUrl: "https://api.nomoreparties.co",
   headers: {
     "content-type": "application/json",
   },

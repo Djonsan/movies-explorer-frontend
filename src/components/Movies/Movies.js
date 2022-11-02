@@ -36,11 +36,11 @@ function Movies({
     return () => {
       window.removeEventListener("resize", changeWidthWindow);
     };
-  }, [setFilteredMovies, setIsSearch]);
+  }, []);
 
   useEffect(() => {
     changeAmountsCards();
-  }, [changeAmountsCards, widthWindow]);
+  }, [widthWindow]);
 
   useEffect(() => {
     setFilteredCards(filteredMovies.slice(0, amountCards));
@@ -49,7 +49,7 @@ function Movies({
     } else {
       setIsMore(false);
     }
-  }, [filteredMovies, amountCards, setFilteredCards]);
+  }, [filteredMovies, amountCards]);
 
   function changeWidthWindow() {
     setTimeout(() => {
@@ -57,7 +57,6 @@ function Movies({
     }, 1000);
   }
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   function changeAmountsCards() {
     switch (true) {
       case widthWindow < 768:

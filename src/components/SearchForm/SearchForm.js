@@ -19,7 +19,7 @@ function SearchForm({ searchFilms, setIsSuccess, setMessageInfo, setIsOpen }) {
         }
       }
     }
-  }, [pathname]);
+  }, []);
 
   function handleChangeFilmName(e) {
     setFilmName(e.target.value);

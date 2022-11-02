@@ -84,7 +84,7 @@ function App() {
 
   useEffect(() => {
     checkToken();
-  }, [checkToken]);
+  }, []);
 
   function closeInfoPopup() {
     setIsOpen(false);
@@ -158,7 +158,6 @@ function App() {
     history.push("/");
   }
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   function checkToken() {
     const jwt = localStorage.getItem("jwt");
     if (jwt) {
@@ -297,7 +296,6 @@ function App() {
   }
 
   function deleteFilm(cardId) {
-    // eslint-disable-next-line array-callback-return
     savedMovies.map((movie) => {
       if (movie.id === cardId) {
         mainApi

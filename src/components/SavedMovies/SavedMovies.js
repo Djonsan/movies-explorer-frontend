@@ -14,7 +14,7 @@ function SavedMovies({
 }) {
   useEffect(() => {
     searchSavedFilms("", false);
-  }, [searchSavedFilms]);
+  }, []);
 
   return (
     <>

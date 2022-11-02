@@ -8,13 +8,12 @@ function MoviesCard({ card, likeFilm, deleteFilm, savedMovies }) {
   const [isLiked, setIsLiked] = useState(false);
 
   useEffect(() => {
-    // eslint-disable-next-line array-callback-return
     savedMovies.map((movie) => {
       if (card.id === movie.id) {
         setIsLiked(true);
       }
     });
-  }, [card.id, savedMovies]);
+  }, [savedMovies]);
 
   function handleDeleteFilm() {
     deleteFilm(card.id);
@@ -39,7 +38,7 @@ function MoviesCard({ card, likeFilm, deleteFilm, savedMovies }) {
       <a href={card.trailerLink}>
         <img
           className="movie__img"
-          src={`https://djonsan.nomoredomains.icu/${card.image.url}`}
+          src={`https://api.nomoreparties.co/${card.image.url}`}
           alt={card.nameRU}
         />
       </a>
